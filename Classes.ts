@@ -1,3 +1,4 @@
+// 추상클래스
 abstract class User {
   constructor(
     // private로 설정하면 인스턴스 밖에서 접근 불가. property 뿐만 아니라 method에도 적용.
@@ -8,8 +9,10 @@ abstract class User {
     protected lastName: string,
     public nickname: string
   ) {}
+  // 추상메소드는 구현이 되어있지 않은 (코드가 없는) 메소드
   abstract getLastName(): void;
 
+  // 기본값은 public
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   }
